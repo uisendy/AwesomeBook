@@ -1,4 +1,4 @@
-import LocalStore from "./LocalStorage.js";
+import LocalStore from './LocalStorage.js';
 
 class Display {
   static displayBooks = () => {
@@ -7,9 +7,9 @@ class Display {
   };
 
   static addBook = (book) => {
-    const displayContainer = document.querySelector(".book-display-container");
-    const bookContainer = document.createElement("div");
-    bookContainer.className = "book-container";
+    const displayContainer = document.querySelector('.book-display-container');
+    const bookContainer = document.createElement('div');
+    bookContainer.className = 'book-container';
     bookContainer.innerHTML = `
         <p class="book-title">"${book.title}" by ${book.author}</p>
         <button id= "${book.id}"class="remove-btn">Remove</button>
@@ -18,12 +18,12 @@ class Display {
   };
 
   static clearForm = () => {
-    document.getElementById("Title").value = "";
-    document.getElementById("Author").value = "";
+    document.getElementById('Title').value = '';
+    document.getElementById('Author').value = '';
   };
 
   static deleteBook = (element) => {
-    if (element.classList.contains("remove-btn")) {
+    if (element.classList.contains('remove-btn')) {
       element.parentElement.remove();
     }
   };
